@@ -39,6 +39,11 @@ def main() -> None:
                 )
             )
 
+        dv = controller.get_device_by_id(39)
+        print("device")
+        print(dv)
+        dv.set_switch_state(1)
+
     finally:
         # Stop the subscription listening thread so we can quit
         controller.stop()
